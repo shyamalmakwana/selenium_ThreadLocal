@@ -6,11 +6,12 @@ import java.util.HashMap;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.WebDriver;
 
 public class BrowserUtility {
-    public static RemoteWebDriver createDriverInstance(String browserType) throws MalformedURLException {
+    public static WebDriver createDriverInstance(String browserType) throws MalformedURLException {
 
-		RemoteWebDriver driver = null;
+		WebDriver driver = null;
 
         String username = System.getenv("LT_USERNAME") == null ? "Your LT Username" : System.getenv("LT_USERNAME");
         String authkey = System.getenv("LT_ACCESS_KEY") == null ? "Your LT AccessKey" : System.getenv("LT_ACCESS_KEY");

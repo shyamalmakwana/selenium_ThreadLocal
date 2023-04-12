@@ -15,7 +15,7 @@ public class Threadlocal {
 	@Parameters({"browser"})
 	@BeforeMethod
 	public void setDriver(String browserType) throws MalformedURLException {
-		RemoteWebDriver driver = BrowserUtility.createDriverInstance(browserType);
+		WebDriver driver = BrowserUtility.createDriverInstance(browserType);
 		threadLocalDriver.set(driver);
 	}
 	
@@ -25,7 +25,7 @@ public class Threadlocal {
 	
 	@AfterMethod
     public void tearDown() {
-        // ((Object) getDriver()).executeScript("lambda-status=" + Status);
+        // driver.executeScript("lambda-status=" + Status);
         getDriver().quit();
     }
 

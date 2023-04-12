@@ -153,7 +153,7 @@ To run parallel tests using **TestNG**, we would have to execute the below comma
   ```
 - For the cloned Java-TestNG-Selenium repo used to run our first sample test
   ```bash
-  mvn test -D suite=parallel.xml
+  mvn test -D suite=parallel_2.xml
   ```
 
 ## Testing Locally Hosted Or Privately Hosted Projects
